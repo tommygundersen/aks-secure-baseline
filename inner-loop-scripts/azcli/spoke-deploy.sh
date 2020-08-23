@@ -1,0 +1,2 @@
+az group create --name rg-enterprise-networking-spokes --location $LOCATION
+az deployment group create --resource-group rg-enterprise-networking-spokes --template-file ../../networking/spoke-BU0001A0008.json --parameters location=$LOCATION hubVnetResourceId="/subscriptions/$SUBSCRIPTION_ID/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-$LOCATION-hub"
